@@ -1,8 +1,6 @@
 from collections import Counter
 
 # Given a number, return the prime factorization of that number
-
-
 def prime_factorization(n):
     def base_factorization(n):
         factors = []
@@ -43,3 +41,12 @@ def prime_factorization(n):
     for factor in formatted:
         out_string += factor + formatted[factor] + "×"
     return out_string[:-1]
+
+# Given a number, determine if it is prime
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
