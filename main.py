@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import argparse
-from utilities.factors import prime_factorizer
+from utilities.factors import prime_factorization
 import utilities.statistics
 
 parser = argparse.ArgumentParser()
@@ -9,4 +9,4 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-n", "--number", type=int, help="Enter a number", required=True)
 
 args = parser.parse_args()
-print(prime_factorizer(args.number))
+print(prime_factorization(args.number))
