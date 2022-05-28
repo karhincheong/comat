@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import argparse
-import utilities.statistics
 from utilities.formatter import *
 
 parser = argparse.ArgumentParser()

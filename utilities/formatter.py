@@ -1,8 +1,9 @@
 #!/usr/bin/python
 from rich.console import Console
 import sys
-sys.path.append("../factors")
-from factors.factors import *
+
+sys.path.append("../../algorithms")
+from algorithms.factors import *
 
 console = Console()
 
