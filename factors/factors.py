@@ -42,6 +42,12 @@ def prime_factorization(n):
         out_string += factor + formatted[factor] + "×"
     return out_string[:-1]
 
+
+def factor_list(n):
+    factors = [i for i in range(1, n + 1) if not (n % i)]
+    return factors
+
+
 # Given a number, determine if it is prime
 def is_prime(n):
     if n < 2:

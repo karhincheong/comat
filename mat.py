@@ -11,3 +11,4 @@ parser.add_argument("-n", "--number", type=int, help="Enter a number", required=
 args = parser.parse_args()
 print_num(args.number)
 print_factorization(args.number)
+print_factors(args.number)
