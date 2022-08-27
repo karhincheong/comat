@@ -15,7 +15,6 @@ def print_factorization(number):
 
 
 def print_factors(number):
-    global factor_ls
     factor_ls = factor_list(number)
     console.print(
         f"[b]Factors[/b]: [blue]{', '.join(str(factor) for factor in factor_ls)}[/blue]"
