@@ -23,7 +23,7 @@ def print_factors(number):
 
 
 def print_parity(number):
-    if 2 in factor_ls:
+    if (2 in factor_ls or factor_ls == []):
         console.print(f"[b]Odd/Even[/b]: [blue u]Even[blue u]")
     else:
         console.print(f"[b]Odd/Even[/b]: [blue u]Odd[blue u]")
