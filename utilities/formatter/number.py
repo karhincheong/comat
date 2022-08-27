@@ -6,32 +6,29 @@ console = Console()
 
 
 def print_num(number):
-    console.print(f"[u][bold blue]{number}[/bold blue][/u]")
+    console.print(f"[b]Number[/b]: [u][bold blue]{number}[/bold blue][/u]")
 
 
 def print_factorization(number):
     factorization = prime_factorization(number)
-    console.print(f"[b]Prime factorization[/b]: [u blue]{factorization}[/u blue]")
+    console.print(f"[b]Prime factorization[/b]: [blue]{factorization}[blue]")
 
 
 def print_factors(number):
     global factor_ls
     factor_ls = factor_list(number)
     console.print(
-        f"[b]Factors[/b]: [blue u b]{','.join(str(factor) for factor in factor_ls)}[/blue u b]"
+        f"[b]Factors[/b]: [blue]{', '.join(str(factor) for factor in factor_ls)}[/blue]"
     )
 
 
 def print_parity(number):
-    if (2 in factor_ls or factor_ls == []):
-        console.print(f"[b]Odd/Even[/b]: [blue u]Even[blue u]")
-    else:
-        console.print(f"[b]Odd/Even[/b]: [blue u]Odd[blue u]")
+    parity = "Even" if number % 2 == 0 else "Odd"
+    console.print(f"[b]Parity[/b]: [blue]{parity}[/blue]")
 
 def print_bases(number):
-    console.print(f"[b]Hexadecimal[/b]: [blue u]{get_hex(number)}[blue u]")
-    console.print(f"[b]Binary[/b]: [blue u]{get_bin(number)}[blue u]")
-
+    console.print(f"[b]Hexadecimal[/b]: [blue]{get_hex(number)}[blue]")
+    console.print(f"[b]Binary[/b]: [blue]{get_bin(number)}[blue]")
 
 def print_number(number):
     print_num(number)
