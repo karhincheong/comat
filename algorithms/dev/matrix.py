@@ -2,9 +2,11 @@
 def matrix_addition(x, y):
     return [[x[i][j] + y[i][j] for j in range(len(x[i]))] for i in range(len(x))]
 
+
 # Given 2 matrices with dimensions x and y, return the difference of the matrices
 def matrix_subtraction(x, y):
     return [[x[i][j] - y[i][j] for j in range(len(x[i]))] for i in range(len(x))]
+
 
 # Given 2 matrices with dimensions x and y, return the product of the matrices
 def matrix_multiplication(x, y):
@@ -12,6 +14,7 @@ def matrix_multiplication(x, y):
         [sum(x[i][k] * y[k][j] for k in range(len(x))) for j in range(len(y[0]))]
         for i in range(len(x))
     ]
+
 
 # Given a matrix with dimensions x and y, return the determinant of the matrix
 def matrix_determinant(x):
@@ -26,6 +29,7 @@ def matrix_determinant(x):
             * (-1) ** i
             for i in range(len(x[0]))
         )
+
 
 # Given a matrix with dimensions x and y, return the inverse of the matrix
 def matrix_inverse(x):
@@ -43,6 +47,7 @@ def matrix_inverse(x):
             ]
             for j in range(len(x))
         ]
+
 
 # Given a matrix with dimensions x and y, return the cofactor of the matrix
 def matrix_cofactor(x):

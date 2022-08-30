@@ -45,9 +45,11 @@ def median_from_array(n, arr):
     else:
         return arr[n // 2]
 
+
 # Given a number n and an array with n numerical elements, return the range of the numbers
 def range(n, arr):
     return max_from_array(n, arr) - min_from_array(n, arr)
+
 
 # Given a number n and an array with n numerical elements, return the standard deviation of the numbers
 def standard_deviation(n, arr):
