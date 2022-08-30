@@ -2,6 +2,8 @@
 from rich.console import Console
 from algorithms.factors import *
 from algorithms.bases import *
+from algorithms.roman import *
+
 console = Console()
 
 
@@ -25,9 +27,15 @@ def print_parity(number):
     parity = "Even" if number % 2 == 0 else "Odd"
     console.print(f"[b]Parity[/b]: [blue]{parity}[/blue]")
 
+
 def print_bases(number):
     console.print(f"[b]Hexadecimal[/b]: [blue]{get_hex(number)}[blue]")
     console.print(f"[b]Binary[/b]: [blue]{get_bin(number)}[blue]")
+
+
+def print_roman(number):
+    console.print(f"[b]Roman Numerals: [blue]{roman(number)}[/blue]")
+
 
 def print_number(number):
     print_num(number)
@@ -35,3 +43,4 @@ def print_number(number):
     print_factors(number)
     print_parity(number)
     print_bases(number)
+    print_roman(number)

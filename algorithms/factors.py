@@ -5,6 +5,7 @@ def prime_factorization(n):
     if n == 0:
         # Special case 0
         return 0
+
     def base_factorization(n):
         factors = []
         while n % 2 == 0:
