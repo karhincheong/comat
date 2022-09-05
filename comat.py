@@ -1,30 +1,22 @@
 #!/usr/bin/python
-import argparse
-from utilities.formatter.number import *
-from rich import print
+import typer
+import rich
+from utilities.formatter.number import print_number
 
-parser = argparse.ArgumentParser()
+import typer
 
-# Number argument
-parser.add_argument(
-    "-n",
-    "--number",
-    type=int,
-    help="Enter a non-negative integer and it will tell you its properties",
-    required=True,
-)
-
-args = parser.parse_args()
+app = typer.Typer()
 
 
-def throw(message):
-    print(
-        "[bold red]" + message + "[bold red]"
-    )  # print("[bold magenta]Mat doesn't support negative integers.[/bold magenta]")
-    exit()
+@app.command()
+def hello(number: str):
+    if int(number) < 0:
+        rich.print(
+            "[bold red]Error: Comat currently doesn't support negative numbers[/bold red]"
+        )
+    else:
+        print_number(int(number))
 
 
-if args.number < 0:
-    throw("Error: Number must be non-negative.")
-else:
-    print_number(args.number)
+if __name__ == "__main__":
+    app()
