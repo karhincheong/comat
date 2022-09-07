@@ -9,13 +9,13 @@ app = typer.Typer()
 
 
 @app.command()
-def hello(number: str):
-    if int(number) < 0:
+def hello(number: int):
+    if number < 0:
         rich.print(
             "[bold red]Error: Comat currently doesn't support negative numbers[/bold red]"
         )
     else:
-        print_number(int(number))
+        print_number(number)
 
 
 if __name__ == "__main__":
