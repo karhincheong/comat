@@ -1,5 +1,5 @@
 # Comat
-***Note: I am experimenting with Typer on this branch. If you want to use the stable version, plese switch to the master branch.***
+
 ## A cat clone made for numbers
 ![](comat_test.png)
 As UNIX-based Operating Systems have `cat` for displaying the contents for a file, `comat` is a CLI app to look at numbers (prime factorization, factors, patterns, etc)
